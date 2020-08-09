@@ -1,0 +1,188 @@
+         body{
+			background-color: whitesmoke;
+			font-family: 'Sirin Stencil', serif;
+			color: grey;
+			font-size: 13px;		}
+		 *{
+			 user-select: none; /* supported by Chrome and Opera */
+  			 -webkit-user-select: none; /* Safari */
+  			 -khtml-user-select: none; /* Konqueror HTML */
+  			 -moz-user-select: none; /* Firefox */
+  			 -ms-user-select: none; /* Internet Explorer/Edge */
+		 }
+		 *:focus{
+			 outline: none;
+		 }
+		.Main_back{
+			margin-top: 75px;;
+			width: 100%;
+		}
+		.container{
+			background-color: white;
+			width: 500px;
+			box-shadow: 0px 0px 10px -5px black;
+			border-radius: 5px;
+			margin-top: 1%;
+			padding: 10px;
+			
+			animation-name: animatePos;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+			
+		}
+		 
+		 @keyframes animatePos{
+			 0%{
+				 margin-top: 100px;
+			 }100%{
+				 margin-top:  10px;
+			 }
+		 }
+		 
+		.image{
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 150px;
+			height: 150px;
+			background-color: whitesmoke;
+		}
+		.containt{
+			width: 280px;
+			padding: 10px;
+		}
+		.expand_collapse{
+			width: 50px;
+			height: 150px;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			cursor: pointer;
+			float: right;
+			background-color: whitesmoke;
+		}
+		.expand{
+			background-image: url("../image/expand.png");
+		}
+		.collapse{
+			background-image: url("../image/collapse.png");
+		}
+		.image, .containt{
+			float: left;
+		}
+		.main_details{
+			overflow-y: hidden;
+			min-height: 150px;
+		}
+		.extra_details{
+			padding-top: 2%;
+			display: none;
+			overflow-y: hidden;
+			animation-name: animateExtra;
+			animation-duration: .5s;
+			animation-fill-mode: forwards;
+		}
+		 
+		 @keyframes animateExtra{
+			 0%{
+				 transform: translateY(-100%);
+   				 opacity: 0;
+			 }
+			 100%{
+				 transform: translateY(0);
+    			 opacity: 1;
+			 }
+		 }
+		 .beer_title{
+			 cursor: pointer;
+			 text-decoration: underline;
+		 }
+		 .loader{
+			 z-index: 999;
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 bottom: 0;
+			 right: 0;
+			 background-color: #232a30;
+			 background-position: center;
+			 background-size: auto;
+			 background-repeat: no-repeat;
+			 background-image: url("../image/loader.gif");
+		 }
+		 .header{
+			 z-index: 99;
+			 position: fixed;
+			 width: 100%;
+			 top: 0;
+			 left: 0;
+			 right: 0;
+			 height: 70px;
+			 background-color: white;
+			 box-shadow: 0px 0px 7px -5px black;
+		 }
+		 
+		 .search{
+			z-index: 100;
+			position: fixed;
+			top: 10px;
+			left: 10px;
+			right: 10px;
+			height: 45px;
+			border-radius: 10px 10px 0 0;
+			box-shadow: 0px 0px 7px -5px black;
+			 background-color: white;
+         }
+         .searchImage{
+         	margin-left: 12px;
+         	margin-top: 13px;
+         	float: left;
+         }
+         .searchImage img{
+         	width: 20px;
+         	height: 20px;
+         	opacity: .5;
+         }
+         .searchBox{
+			 width: 80%;
+         	float: left;
+         	margin-top: 7px;
+         	margin-left: 12px;
+         }
+         .searchBox input{
+         	width: 100%;
+         	text-align: left;
+         	font-size: 15px;
+         	color: gray;
+         	border-radius: 5px;
+			font-family: 'Sirin Stencil', serif;
+         	height: 31px;
+         	background-color: transparent;
+         	border-width: 0;
+         	padding-left: 10px;
+         	padding-right: 10px;
+         	background-color: whitesmoke;
+         }
+		 
+		 
+		 
+		 @media screen and (max-width: 550px){
+			.container{
+				width: 95%;
+				margin-top: 5%;
+			}
+			 .image{
+				 width: 28%;
+				 height: 125px;
+			 }
+			 .containt{
+				 width: 54%;
+			 }
+			 .expand_collapse{
+				 width: 11%;
+				 height: 125px;
+			 }
+			 .main_details{
+				 min-height: 125px;
+			 }
+		}
